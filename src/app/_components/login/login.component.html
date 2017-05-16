@@ -1,0 +1,37 @@
+    <div class="booktaxi-container">
+    <h1>LOGIN</h1>
+    <div class="containerw3layouts-agileits">
+        <div class="w3layoutscontactagileits">
+            <form [formGroup]="loginForm">
+                <div class="agileemailinfo agileinfow3ls">
+                    <div class="agileemailinfo-lable wthreelable">
+                        <label>Email</label><span class="colon">:</span>
+                    </div>
+                    <div class="agileemailinfo-input wthreeinput">
+                        <input class="top" type="text" [(ngModel)]="bLoginDetails.email" name="email" formControlName="email" placeholder="Email" required="">
+                    </div>
+                    <div *ngIf="loginForm.controls['email'].hasError('required') && loginForm.controls['email'].touched" [ngClass]="{'error':!loginForm.controls['email'].valid && loginForm.controls['email'].touched}">you must include email</div>
+                    <div class="clear"></div>
+                </div>
+
+                <div class="agileemailinfo agileinfow3ls">
+                    <div class="agileemailinfo-lable wthreelable">
+                        <label>Password</label><span class="colon">:</span>
+                    </div>
+                    <div class="agileemailinfo-input wthreeinput">
+                        <input class="top" type="password" [(ngModel)]="bLoginDetails.password" name="password" formControlName="password" placeholder="Password" required="">
+                    </div>
+                    <div *ngIf="loginForm.controls['password'].hasError('required') && loginForm.controls['password'].touched" [ngClass]="{'error':!loginForm.controls['password'].valid && loginForm.controls['password'].touched}">you must include password</div>
+                    <div class="clear"></div>
+                </div>
+                <div class="aitssubmitw3ls">
+                    <input type="submit" name="submit" (click)="loginSubmit()" [disabled]="!loginForm.valid" value="SUBMIT">
+                </div>
+                <div class="aitssubmitw3ls">
+                    <a class='routeLink' [routerLink]="['/signup']">Sign up</a>
+                </div> 
+            </form>
+        </div>
+
+    </div>
+</div>

@@ -1,0 +1,102 @@
+<app-dashboard-header></app-dashboard-header>
+<div class="booktaxi-container"> 
+    <h1>BOOK TAXI</h1>
+     <div class="containerw3layouts-agileits">
+        <div class="w3layoutscontactagileits">
+            <form [formGroup]="bookingForm">
+                <div class="agileemailinfo agileinfow3ls">
+                    <div class="agileemailinfo-lable wthreelable">
+                        <label>From</label><span class="colon">:</span>
+                    </div>
+                    <div class="agileemailinfo-input wthreeinput">
+                        <input class="top" type="text" [(ngModel)]="bookingDetails.from" name="from" formControlName="from" required="">
+                    </div>
+                    <div *ngIf="bookingForm.controls['from'].hasError('required') && bookingForm.controls['from'].touched" [ngClass]="{'error':!bookingForm.controls['from'].valid && bookingForm.controls['from'].touched}">you must include from</div>
+                    <div class="clear"></div>
+                </div>
+
+                <div class="agileemailinfo agileinfow3ls">
+                    <div class="agileemailinfo-lable wthreelable">
+                        <label>Destination</label><span class="colon">:</span>
+                    </div>
+                    <div class="agileemailinfo-input wthreeinput">
+                        <select name="destinations" formControlName = "destination" (change)="selectedDest(destinations)" [(ngModel)]="bookingDetails.destinations">
+                            <option *ngFor="let dest of destinations" [value]="dest.area">{{dest.area}}</option>
+                        </select>
+                    </div>
+                    <div *ngIf="bookingForm.controls['destination'].hasError('required') && bookingForm.controls['destination'].touched" [ngClass]="{'error':!bookingForm.controls['destination'].valid && bookingForm.controls['destination'].touched}">you must include destination</div>
+                    <div class="clear"></div>
+                </div>
+                  <div class="agileemailinfo agileinfow3ls">
+                    <div class="agileemailinfo-lable wthreelable">
+                        <label>Total Kms</label><span class="colon">:</span>
+                    </div>
+                    <div class="agileemailinfo-input wthreeinput">
+                        <input class="top" type="text" [(ngModel)]="bookingDetails.totalKms" name="totalKms" formControlName="totalKms" placeholder="" required="">
+                    </div>
+                    <div *ngIf="bookingForm.controls['totalKms'].hasError('required') && bookingForm.controls['totalKms'].touched" [ngClass]="{'error':!bookingForm.controls['totalKms'].valid && bookingForm.controls['totalKms'].touched}">you must include totalKms</div>
+                    <div class="clear"></div>
+                </div>
+                  <div class="agileemailinfo agileinfow3ls">
+                    <div class="agileemailinfo-lable wthreelable">
+                        <label>Fare</label><span class="colon">:</span>
+                    </div>
+                    <div class="agileemailinfo-input wthreeinput">
+                        <input class="top" type="text" [(ngModel)]="bookingDetails.fare" name="fare" formControlName="fare" placeholder="" required="">
+                    </div>
+                    <div *ngIf="bookingForm.controls['fare'].hasError('required') && bookingForm.controls['fare'].touched" [ngClass]="{'error':!bookingForm.controls['fare'].valid && bookingForm.controls['fare'].touched}">you must include fare</div>
+                    <div class="clear"></div>
+                </div>
+                <div class="agileemailinfo agileinfow3ls">
+                    <div class="agileemailinfo-lable wthreelable">
+                        <label>Service tax</label><span class="colon">:</span>
+                    </div>
+                    <div class="agileemailinfo-input wthreeinput">
+                        <input class="top" type="text" [(ngModel)]="bookingDetails.serviceTax" name="serviceTax" formControlName="serviceTax" placeholder="" required="">
+                    </div>
+                    <div *ngIf="bookingForm.controls['serviceTax'].hasError('required') && bookingForm.controls['serviceTax'].touched" [ngClass]="{'error':!bookingForm.controls['serviceTax'].valid && bookingForm.controls['serviceTax'].touched}">you must include serviceTax</div>
+                    <div class="clear"></div>
+                </div>
+                    <div class="agileemailinfo agileinfow3ls">
+                    <div class="agileemailinfo-lable wthreelable">
+                        <label>Baggage charge</label><span class="colon">:</span>
+                    </div>
+                    <div class="agileemailinfo-input wthreeinput">
+                        <input class="top" type="text" [(ngModel)]="bookingDetails.baggageCharge" name="baggageCharge" formControlName="baggageCharge" placeholder="" required="">
+                    </div>
+                    <div *ngIf="bookingForm.controls['baggageCharge'].hasError('required') && bookingForm.controls['baggageCharge'].touched" [ngClass]="{'error':!bookingForm.controls['baggageCharge'].valid && bookingForm.controls['baggageCharge'].touched}">you must include baggageCharge</div>
+                    <div class="clear"></div>
+                </div>
+           <div class="agileemailinfo agileinfow3ls">
+                    <div class="agileemailinfo-lable wthreelable">
+                        <label>Total Fare</label><span class="colon">:</span>
+                    </div>
+                    <div class="agileemailinfo-input wthreeinput">
+                        <input class="top" type="text" [(ngModel)]="bookingDetails.totalFare" name="totalFare" formControlName="totalFare" placeholder="" required="">
+                    </div>
+                    <div *ngIf="bookingForm.controls['totalFare'].hasError('required') && bookingForm.controls['totalFare'].touched" [ngClass]="{'error':!bookingForm.controls['totalFare'].valid && bookingForm.controls['totalFare'].touched}">you must include totalFare</div>
+                    <div class="clear"></div>
+                </div>
+                 <div class="agileemailinfo agileinfow3ls">
+                    <div class="agileemailinfo-lable wthreelable">
+                        <label>Vehicle Number</label><span class="colon">:</span>
+                    </div>
+                    <div class="agileemailinfo-input wthreeinput">
+                         <select name="vehicleNumber" formControlName = "vehicleNumber" [(ngModel)]="bookingDetails.vehicleNumber">
+                            <option *ngFor="let vehicle of vehicleNumber" [value]="vehicle.id">{{vehicle.id}}</option>
+                        </select>
+                        <!--<input class="top" type="text" [(ngModel)]="vehicleNumber" name="vehicleNumber" formControlName="vehicleNumber" placeholder="" required="">-->
+                    </div>
+                    <div *ngIf="bookingForm.controls['vehicleNumber'].hasError('required') && bookingForm.controls['vehicleNumber'].touched" [ngClass]="{'error':!bookingForm.controls['vehicleNumber'].valid && bookingForm.controls['vehicleNumber'].touched}">you must include vehicleNumber</div>
+                    <div class="clear"></div>
+                </div>
+                
+                <div class="aitssubmitw3ls">
+                    <input type="submit" name="submit" (click)="saveForm(bookingDetails)" [disabled]="!bookingForm.valid" value="SAVE">
+                </div>
+            </form>
+        </div>
+
+    </div>
+</div>
+

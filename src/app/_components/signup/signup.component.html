@@ -1,0 +1,56 @@
+<div class="booktaxi-container">
+    <h1>SIGN UP</h1>
+    <div class="containerw3layouts-agileits">
+        <div class="w3layoutscontactagileits">
+            <form [formGroup]="signupForm" >
+                <div class="agileemailinfo agileinfow3ls">
+                    <div class="agileemailinfo-lable wthreelable">
+                        <label>Name</label><span class="colon">:</span>
+                    </div>
+                    <div class="agileemailinfo-input wthreeinput">
+                        <input class="top" type="text" [(ngModel)]="bSignupModel.name" name="name" formControlName="name" placeholder="Name" required="">
+                    </div>
+                    <div class="col-md-6" *ngIf="signupForm.controls['name'].hasError('required') && signupForm.controls['name'].touched" [ngClass]="{'error':!signupForm.controls['name'].valid && signupForm.controls['name'].touched}">you must include name</div>
+                    <div class="clear"></div>
+                </div>
+                <div class="agileemailinfo agileinfow3ls">
+                    <div class="agileemailinfo-lable wthreelable">
+                        <label>Email</label><span class="colon">:</span>
+                    </div>
+                    <div class="agileemailinfo-input wthreeinput">
+                        <input class="top" type="email" [(ngModel)]="bSignupModel.email" name="email" formControlName="email" placeholder="Email" required="">
+                    </div>
+                     <div *ngIf="signupForm.controls['email'].hasError('required') && signupForm.controls['email'].touched" [ngClass]="{'error':!signupForm.controls['email'].valid && signupForm.controls['email'].touched}">you must include email</div>
+                    <div class="clear"></div>
+                </div>
+
+                <div class="agileemailinfo agileinfow3ls">
+                    <div class="agileemailinfo-lable wthreelable">
+                        <label>Password</label><span class="colon">:</span>
+                    </div>
+                    <div class="agileemailinfo-input wthreeinput">
+                        <input class="top" type="password" [(ngModel)]="bSignupModel.password" name="password" formControlName="password" placeholder="Password" required="">
+                    </div>
+                     <div *ngIf="signupForm.controls['password'].hasError('required') && signupForm.controls['password'].touched" [ngClass]="{'error':!signupForm.controls['password'].valid && signupForm.controls['password'].touched}">you must include password</div>
+                    <div class="clear"></div>
+                </div> 
+                <div class="agileemailinfo agileinfow3ls">
+                    <div class="agileemailinfo-lable wthreelable">
+                        <label>Confirm Password</label><span class="colon">:</span>
+                    </div>
+                    <div class="agileemailinfo-input wthreeinput">
+                        <input class="top" type="password" [(ngModel)]="bSignupModel.comfirmPassword" name="comfirmPassword" formControlName="comfirmPassword" placeholder="Confirm Password" required="">
+                    </div>
+                     <div *ngIf="signupForm.controls['comfirmPassword'].hasError('required') && signupForm.controls['comfirmPassword'].touched" [ngClass]="{'error':!signupForm.controls['comfirmPassword'].valid && signupForm.controls['comfirmPassword'].touched}">you must include comfirmPassword</div>
+                    <div class="clear"></div>
+                </div>
+                <div class="aitssubmitw3ls">
+                    <input type="submit" name="submit" (click)="submitForm(bSignupModel)" [disabled]="!signupForm.valid" value="SUBMIT">
+                </div>
+                <div class="aitssubmitw3ls">
+                    <a class='routeLink' [routerLink]="['/login']">Login</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
