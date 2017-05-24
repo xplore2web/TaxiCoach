@@ -11,5 +11,13 @@ export class DriverinfoComponent implements OnInit {
 
   ngOnInit() {
   }
-
+saveForm(){
+    alert("search completed");
+}
+saveForm2(){
+    alert("add completed");
+}
+saveForm3(){
+    alert("delete completed");
+}
 }
