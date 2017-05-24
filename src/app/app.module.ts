@@ -25,6 +25,9 @@ import { TicketsearchComponent } from './_components/ticketsearch/ticketsearch.c
 import { DestinationComponent } from './_components/destination/destination.component';
 import { DriverinfoComponent } from './_components/driverinfo/driverinfo.component';
 import { ReportsComponent } from './_components/reports/reports.component';
+import { AboutComponent } from './_components/about/about.component';
+import { ContactComponent } from './_components/contact/contact.component';
+import { WhatWeDoComponent } from './_components/what-we-do/what-we-do.component';
 
 @NgModule({
   declarations: [
@@ -43,7 +46,10 @@ import { ReportsComponent } from './_components/reports/reports.component';
     TicketsearchComponent,
     DestinationComponent,
     DriverinfoComponent,
-    ReportsComponent
+    ReportsComponent,
+    AboutComponent,
+    ContactComponent,
+    WhatWeDoComponent
   ],
   imports: [
     BrowserModule,

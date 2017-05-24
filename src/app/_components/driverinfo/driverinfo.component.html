@@ -1,1 +1,49 @@
 <app-dashboard-header></app-dashboard-header>
+<div class="booktaxi-container">
+    <h1>Driver Information</h1>
+    <div class="containerw3layouts-agileits">
+        <div class="w3layoutscontactagileits">
+            <form>
+                <div class="agileemailinfo agileinfow3ls">
+                    <div class="agileemailinfo-lable wthreelable">
+                        <label>Vehicle Number</label><span class="colon">:</span>
+                    </div>
+                    <div class="agileemailinfo-input wthreeinput">
+                        <input class="top" type="text" [(ngModel)]="vehicleNumber" name="vehicleNumber"   required="">
+                    </div>
+<!--                    <div class="col-md-6" *ngIf="destinationForm.controls['From'].hasError('required') && destinationForm.controls['From'].touched" [ngClass]="{'error':!destinationForm.controls['From'].valid && destinationForm.controls['From'].touched}">you must include From</div>
+                    <div class="clear"></div>-->
+                </div>
+                  <div class="aitssubmitw3ls">
+                    <input type="submit" name="submit" (click)="saveForm()"  value="SEARCH">
+                </div>
+                      <div class="agileemailinfo agileinfow3ls">
+                    <div class="agileemailinfo-lable wthreelable">
+                        <label>Vehicle Number</label><span class="colon">:</span>
+                    </div>
+                    <div class="agileemailinfo-input wthreeinput">
+                        <input class="top" type="text" [(ngModel)]="vehicleNumber2" name="vehicleNumber2"   required="">
+                    </div>
+<!--                    <div class="col-md-6" *ngIf="destinationForm.controls['From'].hasError('required') && destinationForm.controls['From'].touched" [ngClass]="{'error':!destinationForm.controls['From'].valid && destinationForm.controls['From'].touched}">you must include From</div>
+                    <div class="clear"></div>-->
+                </div>
+                  <div class="aitssubmitw3ls">
+                    <input type="submit" name="submit" (click)="saveForm2()"  value="ADD">
+                </div>
+                      <div class="agileemailinfo agileinfow3ls">
+                    <div class="agileemailinfo-lable wthreelable">
+                        <label>Vehicle Number</label><span class="colon">:</span>
+                    </div>
+                    <div class="agileemailinfo-input wthreeinput">
+                        <input class="top" type="text" [(ngModel)]="vehicleNumber3" name="vehicleNumber3"   required="">
+                    </div>
+<!--                    <div class="col-md-6" *ngIf="destinationForm.controls['From'].hasError('required') && destinationForm.controls['From'].touched" [ngClass]="{'error':!destinationForm.controls['From'].valid && destinationForm.controls['From'].touched}">you must include From</div>
+                    <div class="clear"></div>-->
+                </div>
+                  <div class="aitssubmitw3ls">
+                    <input type="submit" name="submit" (click)="saveForm3()"  value="DELETE">
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

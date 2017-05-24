@@ -44,6 +44,7 @@ export class LoginComponent implements OnInit {
 
     loginSubmit() {
         alert(JSON.stringify(this.bLoginDetails));
+         this.router.navigate(['/booking']);
         this.loginService.signin(this.bLoginDetails).then(response => {
             alert(JSON.stringify(response));
             if (response == "Signin Error") {

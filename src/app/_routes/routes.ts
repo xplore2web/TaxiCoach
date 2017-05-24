@@ -11,7 +11,9 @@ import {TicketsearchComponent} from 'app/_components/ticketsearch/ticketsearch.c
 import {DestinationComponent} from 'app/_components/destination/destination.component';
 import {DriverinfoComponent} from 'app/_components/driverinfo/driverinfo.component';
 import {ReportsComponent} from 'app/_components/reports/reports.component';
-
+import {WhatWeDoComponent} from 'app/_components/what-we-do/what-we-do.component';
+import {AboutComponent} from 'app/_components/about/about.component';
+import {ContactComponent} from 'app/_components/contact/contact.component';
 // Route config let's you map routes to components
 const routes: Routes = [
     // map '/persons' to the people list component
@@ -59,6 +61,18 @@ const routes: Routes = [
     {
         path: 'signup',
         component: SignupComponent,
+    },
+      {
+        path: 'what-we-do',
+        component: WhatWeDoComponent,
+    },
+       {
+        path: 'about',
+        component:AboutComponent ,
+    },
+         {
+        path: 'contact',
+        component: ContactComponent ,
     },
     // map '/' to '/persons' as our default route dashboard
     {
