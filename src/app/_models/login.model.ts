@@ -7,6 +7,6 @@
 
  export class loginModel
  {
-     email:string;
+     emailId:string;
      password:string;
  }
