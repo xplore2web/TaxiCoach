@@ -14,7 +14,7 @@ import {routing} from 'app/_routes/routes';
 import {Http} from '@angular/http';
 import {ApplicationSessionService} from 'app/_services/applicationsession/application-session.service';
 import {HttpTestService} from 'app/_services/http-service/http-test.service';
-import {HeroService} from 'app/_services/Hero-service/Hero.service';
+import {HeroService} from 'app/_services/hero-service/hero.service';
 import {DashService} from 'app/_services/dashboard-service/dash.service';
 import { EmployeeComponent } from './_components/employee/employee.component';
 import { DashboardComponent } from './_components/dashboard/dashboard.component';
