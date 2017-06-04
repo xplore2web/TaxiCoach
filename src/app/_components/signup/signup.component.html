@@ -21,6 +21,7 @@
                         <input class="top" type="email" [(ngModel)]="bSignupModel.email" name="email" formControlName="email" placeholder="Email" required="">
                     </div>
                      <div *ngIf="signupForm.controls['email'].hasError('required') && signupForm.controls['email'].touched" [ngClass]="{'error':!signupForm.controls['email'].valid && signupForm.controls['email'].touched}">you must include email</div>
+                     <div *ngIf="signupForm.controls['email'].hasError('pattern') && signupForm.controls['email'].touched" class="alert alert-danger">Invalid email address.</div>
                     <div class="clear"></div>
                 </div>
 

@@ -6,18 +6,14 @@ import { AppComponent } from './app.component';
 import { SignupComponent } from './_components/signup/signup.component';
 import { HeaderComponent } from './_components/header/header.component';
 import { LoginComponent } from './_components/login/login.component';
-import { MySignupComponent } from './_components/my-signup/my-signup.component';
 import { AdminComponent } from './_components/admin/admin.component';
 import { HomepageComponent } from './_components/homepage/homepage.component';
-import { OrderComponent } from './_components/order/order.component';
 import {routing} from 'app/_routes/routes';
 import {Http} from '@angular/http';
 import {ApplicationSessionService} from 'app/_services/applicationsession/application-session.service';
 import {HttpTestService} from 'app/_services/http-service/http-test.service';
 import {HeroService} from 'app/_services/hero-service/hero.service';
 import {DashService} from 'app/_services/dashboard-service/dash.service';
-import { EmployeeComponent } from './_components/employee/employee.component';
-import { DashboardComponent } from './_components/dashboard/dashboard.component';
 import {LoginService} from 'app/_services/login-service/login.service';
 import { DashboardHeaderComponent } from './_components/dashboard-header/dashboard-header.component';
 import { BookingComponent } from './_components/booking/booking.component';
@@ -28,6 +24,7 @@ import { ReportsComponent } from './_components/reports/reports.component';
 import { AboutComponent } from './_components/about/about.component';
 import { ContactComponent } from './_components/contact/contact.component';
 import { WhatWeDoComponent } from './_components/what-we-do/what-we-do.component';
+import { StaffComponent } from './_components/staff/staff.component';
 
 @NgModule({
   declarations: [
@@ -35,12 +32,8 @@ import { WhatWeDoComponent } from './_components/what-we-do/what-we-do.component
     SignupComponent,
     HeaderComponent,
     LoginComponent,
-    MySignupComponent,
     AdminComponent,
     HomepageComponent,
-    OrderComponent,
-    EmployeeComponent,
-    DashboardComponent,
     DashboardHeaderComponent,
     BookingComponent,
     TicketsearchComponent,
@@ -49,7 +42,8 @@ import { WhatWeDoComponent } from './_components/what-we-do/what-we-do.component
     ReportsComponent,
     AboutComponent,
     ContactComponent,
-    WhatWeDoComponent
+    WhatWeDoComponent,
+    StaffComponent
   ],
   imports: [
     BrowserModule,

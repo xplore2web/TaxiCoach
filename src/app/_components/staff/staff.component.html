@@ -1,0 +1,58 @@
+<app-dashboard-header></app-dashboard-header>
+<div class="booktaxi-container">
+
+    <div class="aitssubmitw3ls">
+        <input type="submit" name="add"  (click)="isAddStaff=true" value="ADD STAFF">
+<!--    </div>
+    <div class="aitssubmitw3ls">-->
+        <input type="submit" name="delete" (click)="isAddStaff=false" value="DELETE STAFF">
+    </div>
+
+    <div class="containerw3layouts-agileits" *ngIf="isAddStaff">
+        <h1>ADD STAFF</h1>
+        <div class="w3layoutscontactagileits">
+            <div class="agileemailinfo agileinfow3ls">
+                <div class="agileemailinfo-lable wthreelable">
+                    <label>Approve Staff</label><span class="colon">:</span>
+                </div>
+                <div class="agileemailinfo-input wthreeinput">
+                    <select name="destination" (change)="selectedDest(destination)" [(ngModel)]="destination">
+                        <option *ngFor="let dest of destination" [value]="dest.area">{{dest.area}}</option>
+                    </select>
+                    <!--<input class="top" type="text" [(ngModel)]="bSignupModel.deleteDestination" name="deleteDestination" formControlName="deleteDestination"  required="">-->
+                </div>
+                <!--<div class="col-md-6" *ngIf="destinationDeleteForm.controls['destination'].hasError('required') && destinationDeleteForm.controls['destination'].touched" [ngClass]="{'error':!destinationDeleteForm.controls['destination'].valid && destinationDeleteForm.controls['destination'].touched}">you must include deleteDestination</div>-->
+                <div class="clear"></div>
+            </div>
+            <div class="aitssubmitw3ls">
+                <input type="submit" name="submit" (click)="saveForm(destinationModel)" [disabled]="!destinationForm.valid" value="Approve">
+            </div> 
+        </div>
+    </div>
+
+    <div class="containerw3layouts-agileits"  *ngIf="!isAddStaff">
+        <h1>DELETE STAFF</h1>
+        <div class="w3layoutscontactagileits">
+            <div class="agileemailinfo agileinfow3ls">
+                <div class="agileemailinfo-lable wthreelable">
+                    <label>Delete Staff</label><span class="colon">:</span>
+                </div>
+                <div class="agileemailinfo-input wthreeinput">
+                    <select name="destination"  (change)="selectedDest(destination)" [(ngModel)]="destination">
+                        <option *ngFor="let dest of destination" [value]="dest.area">{{dest.area}}</option>
+                    </select>
+                    <!--<input class="top" type="text" [(ngModel)]="bSignupModel.deleteDestination" name="deleteDestination" formControlName="deleteDestination"  required="">-->
+                </div>
+                <!--<div class="col-md-6" *ngIf="destinationDeleteForm.controls['destination'].hasError('required') && destinationDeleteForm.controls['destination'].touched" [ngClass]="{'error':!destinationDeleteForm.controls['destination'].valid && destinationDeleteForm.controls['destination'].touched}">you must include deleteDestination</div>-->
+                <div class="clear"></div>
+            </div>
+            <div class="aitssubmitw3ls">
+                <input type="submit" name="submit" (click)="deleteDestination(destination)" value="DELETE">
+            </div> 
+        </div>
+    </div>
+</div>
+
+
+
+
