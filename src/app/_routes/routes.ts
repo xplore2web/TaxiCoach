@@ -1,9 +1,5 @@
 import {Routes, RouterModule} from '@angular/router';
-import {MySignupComponent} from 'app/_components/my-signup/my-signup.component';
 import {HomepageComponent} from 'app/_components/homepage/homepage.component';
-import {OrderComponent} from 'app/_components/order/order.component';
-import {EmployeeComponent} from 'app/_components/employee/employee.component';
-import {DashboardComponent} from 'app/_components/dashboard/dashboard.component';
 import {SignupComponent} from 'app/_components/signup/signup.component';
 import {LoginComponent} from 'app/_components/login/login.component';
 import {BookingComponent} from 'app/_components/booking/booking.component';
@@ -14,6 +10,7 @@ import {ReportsComponent} from 'app/_components/reports/reports.component';
 import {WhatWeDoComponent} from 'app/_components/what-we-do/what-we-do.component';
 import {AboutComponent} from 'app/_components/about/about.component';
 import {ContactComponent} from 'app/_components/contact/contact.component';
+import {StaffComponent} from 'app/_components/staff/staff.component';
 // Route config let's you map routes to components
 const routes: Routes = [
     // map '/persons' to the people list component
@@ -47,16 +44,8 @@ const routes: Routes = [
         component: HomepageComponent,
     },
     {
-        path: 'order',
-        component: OrderComponent,
-    },
-    {
-        path: 'employee',
-        component: EmployeeComponent,
-    },
-    {
-        path: 'dashboard',
-        component: DashboardComponent,
+        path: 'staff',
+        component: StaffComponent,
     },
     {
         path: 'signup',

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {FormGroup, FormBuilder, Validators} from '@angular/forms';
 import {Router} from '@angular/router';
 import {signupModel} from 'app/_models/signup.model';
+import {kEmailRegex} from 'app/_constants/constants';
 @Component({
   selector: 'app-signup',
   templateUrl: './signup.component.html',
@@ -14,7 +15,7 @@ export class SignupComponent implements OnInit {
   constructor(fb: FormBuilder,private router: Router) {
            this.signupForm = fb.group({
             'name': [null, Validators.compose([<any> Validators.required])],
-            'email': [null, Validators.compose([<any> Validators.required])],
+            'email': [null, Validators.compose([<any> Validators.required, <any> Validators.pattern(kEmailRegex)])],
             'password': [null, Validators.compose([<any> Validators.required])],
             'comfirmPassword': [null, Validators.compose([<any> Validators.required])]
         });

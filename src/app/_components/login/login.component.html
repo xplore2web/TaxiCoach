@@ -11,6 +11,7 @@
                         <input class="top" type="text" [(ngModel)]="bLoginDetails.email" name="email" formControlName="email" placeholder="Email" required="">
                     </div>
                     <div *ngIf="loginForm.controls['email'].hasError('required') && loginForm.controls['email'].touched" [ngClass]="{'error':!loginForm.controls['email'].valid && loginForm.controls['email'].touched}">you must include email</div>
+                  <div *ngIf="loginForm.controls['email'].hasError('pattern') && loginForm.controls['email'].touched" class="alert alert-danger">Invalid email address.</div>
                     <div class="clear"></div>
                 </div>
 

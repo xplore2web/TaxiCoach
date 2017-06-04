@@ -9,7 +9,10 @@
                     <label>Ticket Id</label>
                 </div>
                 <div class="agileemailinfo-input wthreeinput">
-                    <input class="top" type="text" [(ngModel)]="bticketsearch.id" name="from" placeholder="" required="">
+                     <select name="ticketId" formControlName = "ticketId"  [(ngModel)]="bticketsearch.ticketId">
+                            <option *ngFor="let ticket of ticketId" [value]="ticket.id">{{ticket.id}}</option>
+                        </select>
+<!--                    <input class="top" type="text" [(ngModel)]="bticketsearch.id" name="from" placeholder="" required="">-->
                
                </div>
             <div class="aitssubmitw3ls">

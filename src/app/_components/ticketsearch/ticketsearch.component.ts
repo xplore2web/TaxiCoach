@@ -7,12 +7,17 @@ import {ticketsearchmodel} from 'app/_models/ticketsearch.model';
 })
 export class TicketsearchComponent implements OnInit {
 bticketsearch : ticketsearchmodel = new ticketsearchmodel();
+ticketId:any[];
   constructor() { }
 
 submitForm(bticketsearch:ticketsearchmodel) {
         alert(JSON.stringify(bticketsearch));   
 }
   ngOnInit() {
+            this.ticketId = [{id: "11"},{id: " 12"},{id: "13"}];
   }
+//   selectedticketSearch(ticketSearch){
+//        
+//    }
 
 }
