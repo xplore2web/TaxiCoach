@@ -11,9 +11,6 @@ import { HomepageComponent } from './_components/homepage/homepage.component';
 import {routing} from 'app/_routes/routes';
 import {Http} from '@angular/http';
 import {ApplicationSessionService} from 'app/_services/applicationsession/application-session.service';
-import {HttpTestService} from 'app/_services/http-service/http-test.service';
-import {HeroService} from 'app/_services/hero-service/hero.service';
-import {DashService} from 'app/_services/dashboard-service/dash.service';
 import {LoginService} from 'app/_services/login-service/login.service';
 import { DashboardHeaderComponent } from './_components/dashboard-header/dashboard-header.component';
 import { BookingComponent } from './_components/booking/booking.component';
@@ -52,7 +49,7 @@ import { StaffComponent } from './_components/staff/staff.component';
     HttpModule,
     routing
   ],
-  providers: [HttpTestService, HeroService, DashService, LoginService,ApplicationSessionService],
+  providers: [LoginService,ApplicationSessionService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
