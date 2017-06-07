@@ -29,20 +29,11 @@ export class LoginComponent implements OnInit {
     submitForm(loginDetails: loginModel) {
         alert(JSON.stringify(loginDetails));
         alert("Successfully logged in.");
-        this.getLoginDetails();
         this.router.navigate(['/booking']);
 
     }
     ngOnInit() {
     }
-
-    getLoginDetails(): void {
-        this.loginService.getLoginDetails().then(
-            response =>
-                this.loginDet = response
-        );
-    }
-
     loginSubmit() {
         alert(JSON.stringify(this.bLoginDetails));
          this.router.navigate(['/booking']);

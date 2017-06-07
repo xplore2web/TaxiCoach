@@ -6,6 +6,6 @@
 export const environment = {
     production: false,
     envName: 'local',
-    webServicesUrl: 'http://localhost:9090/',
+    webServicesUrl: 'http://192.168.122.1:9090/',
     clientUrl: 'http://localhost:4200/'
 };
