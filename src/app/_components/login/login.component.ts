@@ -35,8 +35,6 @@ export class LoginComponent implements OnInit {
     }
     ngOnInit() {
     }
-
-
     loginSubmit() {
         alert(JSON.stringify(this.bAccount));
 //        this.router.navigate(['/booking']);
