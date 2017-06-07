@@ -7,7 +7,6 @@
 
  export class signupModel{
      name:string;
-     email:any[];
-     password:any[];
-     confirmpassword:any[];
+     emailId:string;
+     password:string;
  }

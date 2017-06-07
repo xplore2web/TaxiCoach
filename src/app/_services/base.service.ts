@@ -18,7 +18,7 @@ export class BaseService {
     }
 
     public jwtSignin() {
-        let headers = new Headers({'Content-Type': 'application/json'});
+        let headers = new Headers({ 'authorization': 'Basic YWxjb3JkYXBwOmFsY29yZHRlY2gyMDE3','Content-Type': 'application/json'});
         return new RequestOptions({headers: headers});
     }
 

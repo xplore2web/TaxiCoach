@@ -18,7 +18,7 @@
                         <label>Email</label><span class="colon">:</span>
                     </div>
                     <div class="agileemailinfo-input wthreeinput">
-                        <input class="top" type="email" [(ngModel)]="bSignupModel.email" name="email" formControlName="email" placeholder="Email" required="">
+                        <input class="top" type="email" [(ngModel)]="bSignupModel.emailId" name="email" formControlName="email" placeholder="Email" required="">
                     </div>
                      <div *ngIf="signupForm.controls['email'].hasError('required') && signupForm.controls['email'].touched" [ngClass]="{'error':!signupForm.controls['email'].valid && signupForm.controls['email'].touched}">you must include email</div>
                      <div *ngIf="signupForm.controls['email'].hasError('pattern') && signupForm.controls['email'].touched" class="alert alert-danger">Invalid email address.</div>
@@ -35,7 +35,7 @@
                      <div *ngIf="signupForm.controls['password'].hasError('required') && signupForm.controls['password'].touched" [ngClass]="{'error':!signupForm.controls['password'].valid && signupForm.controls['password'].touched}">you must include password</div>
                     <div class="clear"></div>
                 </div> 
-                <div class="agileemailinfo agileinfow3ls">
+<!--                <div class="agileemailinfo agileinfow3ls">
                     <div class="agileemailinfo-lable wthreelable">
                         <label>Confirm Password</label><span class="colon">:</span>
                     </div>
@@ -44,7 +44,7 @@
                     </div>
                      <div *ngIf="signupForm.controls['comfirmPassword'].hasError('required') && signupForm.controls['comfirmPassword'].touched" [ngClass]="{'error':!signupForm.controls['comfirmPassword'].valid && signupForm.controls['comfirmPassword'].touched}">you must include comfirmPassword</div>
                     <div class="clear"></div>
-                </div>
+                </div>-->
                 <div class="aitssubmitw3ls">
                     <input type="submit" name="submit" (click)="submitForm(bSignupModel)" [disabled]="!signupForm.valid" value="SUBMIT">
                 </div>

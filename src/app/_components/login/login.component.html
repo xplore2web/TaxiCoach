@@ -8,7 +8,7 @@
                         <label>Email</label><span class="colon">:</span>
                     </div>
                     <div class="agileemailinfo-input wthreeinput">
-                        <input class="top" type="text" [(ngModel)]="bLoginDetails.emailId" name="email" formControlName="email" placeholder="Email" required="">
+                        <input class="top" type="text" [(ngModel)]="bAccount.name" name="email" formControlName="email" placeholder="Email" required="">
                     </div>
                     <div *ngIf="loginForm.controls['email'].hasError('required') && loginForm.controls['email'].touched" [ngClass]="{'error':!loginForm.controls['email'].valid && loginForm.controls['email'].touched}">you must include email</div>
                   <div *ngIf="loginForm.controls['email'].hasError('pattern') && loginForm.controls['email'].touched" class="alert alert-danger">Invalid email address.</div>
@@ -20,7 +20,7 @@
                         <label>Password</label><span class="colon">:</span>
                     </div>
                     <div class="agileemailinfo-input wthreeinput">
-                        <input class="top" type="password" [(ngModel)]="bLoginDetails.password" name="password" formControlName="password" placeholder="Password" required="">
+                        <input class="top" type="password" [(ngModel)]="bAccount.password" name="password" formControlName="password" placeholder="Password" required="">
                     </div>
                     <div *ngIf="loginForm.controls['password'].hasError('required') && loginForm.controls['password'].touched" [ngClass]="{'error':!loginForm.controls['password'].valid && loginForm.controls['password'].touched}">you must include password</div>
                     <div class="clear"></div>
